@@ -1,0 +1,80 @@
+:root {
+	--global: #2C7A60;
+	--global-dark: #1f5241;
+}
+
+body {
+	background-color: var(--global);
+	font-family: arial, sans-serif;
+	color: white;
+	margin-top: 10%;
+}
+
+#money, #pseudo, #bet, #pot, #names, #winButtons, #iwindiv {
+	margin: auto;
+	margin-top: 2%;
+	text-align: center;
+}
+
+#uAre {
+	text-align: center;
+}
+
+#pseudo {
+	margin-top: 20%;
+}
+
+#pseudo label {
+	margin-bottom: 8px;
+	display: inline-block;
+}
+
+#names {
+	min-width: 25%;
+	max-width: 50%;
+	border: solid var(--global-dark);
+}
+
+#names li {
+	text-align: left;
+}
+
+#winButtons input {
+	margin: 5px;
+}
+
+input[type='button'] {
+	margin-top: 10px;
+	border: solid 1px #ffffff;
+	border-radius: 2px;
+	padding: 5px 10px ;
+	font-weight: 500;
+	color: #ffffff;
+	background-color: var(--global);
+	transition: background-color .2s, color .2s;
+}
+
+input[type='button']:not([name = 'sendBet']):hover {
+	color: var(--global);
+	background-color: #fafafa;
+}
+
+input[name='sendBet'] {
+	animation: whiteToGlobal 1.5s infinite;
+	transition: background-color , color ;
+}
+
+.result {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+
+@keyframes whiteToGlobal {
+	0% {
+		background-color: var(--global);
+	}
+	50% {
+		background-color: rgba(255, 255, 255, .1);
+	}
+}
